@@ -1,7 +1,6 @@
+"use client";
 import Link from "next/link";
-import Image from "next/image";
 import React, { useState } from "react";
-import Logo from "./logo";
 import NavItem from "./navitem";
 
 const MENU_LIST = [
@@ -19,9 +18,7 @@ function NavBar() {
     <header>
       <nav className={`nav`}>
         <Link href={"/"}>
-          <a>
-            <h1 className="logo">CodeWithMarish</h1>
-          </a>
+          <h1 className="logo">CodeWithMarish</h1>
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}
