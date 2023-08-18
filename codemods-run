@@ -1,0 +1,9 @@
+npx @next/codemod@latest built-in-next-font .
+npx @next/codemod@latest next-image-to-legacy-image .
+npx @next/codemod@latest next-image-experimental .
+npx @next/codemod@latest new-link .
+npx @next/codemod cra-to-next
+npx @next/codemod add-missing-react-import
+npx @next/codemod name-default-component
+npx @next/codemod withamp-to-config
+npx @next/codemod url-to-withrouter
