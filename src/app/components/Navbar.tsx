@@ -24,13 +24,14 @@ export default function Navbar() {
 function NavigationLink({ href, text, router }) {
 	const isActive = router.asPath === (href === "/home" ? "/" : href);
 	return (
-        (<Link
+        <Link
             href={href === "/home" ? "/" : href}
             passHref
-            className={`${isActive && "nav_item_active"} nav_item`}>
+            className={`${isActive && "nav_item_active"} nav_item`}
+            legacyBehavior>
 
-            <span>{text}</span>
+                <span>{text}</span>
 
-        </Link>)
+            </Link>
     );
 }
