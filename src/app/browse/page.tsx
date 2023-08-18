@@ -32,9 +32,9 @@ interface PlotRows {
   };
 }
 
-export interface BrowseProps extends SelectPlotProps {}
+interface BrowseProps extends SelectPlotProps {}
 
-export interface BrowsePureProps extends BrowseProps {
+interface BrowsePureProps extends BrowseProps {
   error?: Error;
   /** True when plot data has finished loading. */
   isLoaded: boolean;
@@ -134,7 +134,7 @@ function Container({ children }: { children?: React.ReactNode }) {
 /**
  * Allows selecting from a list of plots, then shows the data for that plot.
  */
-export function BrowsePure({
+function BrowsePure({
   plot,
   setPlot,
   error,
