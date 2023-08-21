@@ -6,7 +6,6 @@ import Reporting from './reporting/page';
 import Login from '@/components/common/login';
 import NavBar from '@/components/navigation/navbar';
 import { Plot } from '@/components/filehandling/selectplot';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function Home() {
   const initialState: Plot = { plotName: '', plotNumber: 0 };
@@ -32,21 +31,23 @@ function Home() {
     }
   }
   return (
-    <Router>
-      {userInfo ? <NavBar /> : <p></p>}
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route
-          path="/validation"
-          element={<Validate plot={localPlot} setPlot={setLocalPlot} />}
-        />
-        <Route
-          path="/browse"
-          element={<Browse plot={localPlot} setPlot={setLocalPlot} />}
-        />
-        <Route path="/reporting" element={<Reporting />} />
-      </Routes>
-    </Router>
+    <NavBar />
+    // <Router>
+    //   {userInfo ? <NavBar /> : <p></p>}
+    //   <NavBar />
+    //   <Routes>
+    //     <Route path="/" element={<Login />} />
+    //     <Route
+    //       path="/validation"
+    //       element={<Validate plot={localPlot} setPlot={setLocalPlot} />}
+    //     />
+    //     <Route
+    //       path="/browse"
+    //       element={<Browse plot={localPlot} setPlot={setLocalPlot} />}
+    //     />
+    //     <Route path="/reporting" element={<Reporting />} />
+    //   </Routes>
+    // </Router>
   );
 }
 
