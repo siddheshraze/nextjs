@@ -6,6 +6,7 @@ import Reporting from './reporting/page';
 import Login from '@/components/common/login';
 import NavBar from '@/components/navigation/navbar';
 import { Plot } from '@/components/filehandling/selectplot';
+import { LoginButton } from '@/components/common/loginbutton';
 
 function Home() {
   const initialState: Plot = { plotName: '', plotNumber: 0 };
@@ -31,7 +32,8 @@ function Home() {
     }
   }
   return (
-    <NavBar />
+    <LoginButton />
+    // <NavBar />
     // <Router>
     //   {userInfo ? <NavBar /> : <p></p>}
     //   <NavBar />
